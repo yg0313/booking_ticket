@@ -1,0 +1,5 @@
+openapi: 3.0.3
+info:
+  title: 예매 시스템
+  description: |-
+    공연 관람에 대한 예매 시스템 클론 코딩 페이지입니다.

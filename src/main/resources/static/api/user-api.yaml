@@ -1,0 +1,16 @@
+openapi: 3.0.3
+info:
+  title: 사용자 및 인증 관련 API
+  description: |-
+    사용자 및 인증 관련 API 관리
+
+tags:
+  - name: user
+    description: 사용자 관리
+
+paths:
+  /user:
+    post:
+      tags:
+        - user
+      summary: 사용자 등록
