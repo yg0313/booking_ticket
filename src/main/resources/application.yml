@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: booking_ticket
+  datasource:
+    url: 'jdbc:h2:~/booking'
+    username: 'yg'
+    password: ''
+    driver-class-name: org.h2.Driver
+  sql:
+    init.mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: '/h2'
