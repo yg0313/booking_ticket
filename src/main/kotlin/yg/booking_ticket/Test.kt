@@ -8,6 +8,6 @@ class Test {
 
     @GetMapping("/test")
     fun test(): String {
-        return "end";
+        return "last"
     }
 }
