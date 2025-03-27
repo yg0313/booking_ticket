@@ -59,6 +59,7 @@ jib {
 		image = "booking_ticket:latest"   // Target Docker image name
 	}
 	container {
+		creationTime = "USE_CURRENT_TIMESTAMP"
 		ports = listOf("21190")
 	}
 }
