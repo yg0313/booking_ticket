@@ -8,6 +8,6 @@ class Test {
 
     @GetMapping("/test")
     fun test(): String {
-        return "ci/cd ok";
+        return "other environment push";
     }
 }
