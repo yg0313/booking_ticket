@@ -4,6 +4,8 @@ plugins {
 	kotlin("plugin.jpa") version "1.9.24"
 	kotlin("jvm") version "1.9.24"
 	kotlin("plugin.spring") version "1.9.24"
+
+	id("com.google.cloud.tools.jib") version "3.4.0"  // Jib Plugin
 }
 
 group = "yg"
@@ -41,4 +43,22 @@ kotlin {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+jib {
+	from {
+		image = "eclipse-temurin:17-jre"  // Base image with Java 17
+		platforms {
+			platform {
+				architecture = "arm64"
+				os = "linux"
+			}
+		}
+	}
+	to {
+		image = "booking_ticket:latest"   // Target Docker image name
+	}
+	container {
+		ports = listOf("21190")
+	}
 }

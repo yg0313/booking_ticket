@@ -1,3 +1,5 @@
+server.port: 21190
+
 spring:
   application:
     name: booking_ticket
